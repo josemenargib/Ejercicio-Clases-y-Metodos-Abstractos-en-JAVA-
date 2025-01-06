@@ -1,18 +1,24 @@
-## Getting Started
+Ejercicio: Sistema de Vehículos
+Instrucciones:
+Crea una clase abstracta llamada Vehiculo con los siguientes atributos y métodos:
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Atributos:
+String marca
+String modelo
+int anio
+Métodos:
+Constructor que inicialice los atributos.
+Un método abstracto double calcularImpuesto().
+Un método abstracto void mostrarCaracteristicas().
+Un método concreto String mostrarInformacion() que devuelva los detalles básicos del vehículo (marca, modelo, año).
+Crea dos clases concretas que extiendan Vehiculo:
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Auto:
+Atributos adicionales: int numeroPuertas.
+Implementa el método calcularImpuesto() (impuesto = 5% del año del vehículo multiplicado por el número de puertas).
+Implementa el método mostrarCaracteristicas() para mostrar información específica del auto.
+Moto:
+Atributos adicionales: boolean tieneSidecar.
+Implementa el método calcularImpuesto() (impuesto = 3% del año del vehículo, con un 20% extra si tiene sidecar).
+Implementa el método mostrarCaracteristicas() para mostrar información específica de la moto.
+En una clase Main, crea objetos de Auto y Moto, y utiliza los métodos para calcular el impuesto y mostrar sus características.
